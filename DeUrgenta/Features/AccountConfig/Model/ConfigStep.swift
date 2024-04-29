@@ -1,7 +1,7 @@
 import Foundation
 
 enum ConfigStepType {
-    case adress
+    case address
     case group
     case backpack
     case firstAid

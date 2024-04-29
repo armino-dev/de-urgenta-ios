@@ -5,7 +5,7 @@ class AccountConfigViewModel: ObservableObject {
 
     init() {
         steps = [ConfigStep(name: "Configurează adresele",
-                            type: .adress,
+                            type: .address,
                             logo: "config.map-icon",
                             enabled: true),
 
