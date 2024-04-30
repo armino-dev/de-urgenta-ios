@@ -3,7 +3,7 @@ import SwiftUI
 import UIKit
 
 protocol AccountConfigCoordinatorDelegate: AnyObject {
-    func accountConfigCoordinatorShouldPresentAdress(_ coordinator: AccountConfigCoordinator)
+    func accountConfigCoordinatorShouldPresentAddress(_ coordinator: AccountConfigCoordinator)
     func accountConfigCoordinatorShouldPresentGroup(_ coordinator: AccountConfigCoordinator)
     func accountConfigCoordinatorShouldPresentBackpack(_ coordinator: AccountConfigCoordinator)
     func accountConfigCoordinatorShouldPresentFirstAid(_ coordintaor: AccountConfigCoordinator)
@@ -34,8 +34,8 @@ extension AccountConfigCoordinator: AccountConfigViewDelegate {
 
     func accountConfigViewShouldRedirect(from _: AccountConfigView, withItem item: ConfigStep) {
         switch item.type {
-        case .adress:
-            delegate?.accountConfigCoordinatorShouldPresentAdress(self)
+        case .address:
+            delegate?.accountConfigCoordinatorShouldPresentAddress(self)
         case .group:
             delegate?.accountConfigCoordinatorShouldPresentGroup(self)
         case .backpack:

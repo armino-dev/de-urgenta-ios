@@ -56,8 +56,13 @@ extension ApplicationCoordinator: AccountConfigCoordinatorDelegate {
         removeChildCoordinator(sender)
     }
 
-    func accountConfigCoordinatorShouldPresentAdress(_: AccountConfigCoordinator) {
+    func accountConfigCoordinatorShouldPresentAddress(_ sender: AccountConfigCoordinator) {
         // TODO: Implement this method
+        let coordinator = CreateAddressCoordinator(navigationController: navigationController)
+        addChildCoordinator(coordinator)
+        coordinator.start()
+
+        removeChildCoordinator(sender)
     }
 
     func accountConfigCoordinatorShouldPresentGroup(_ sender: AccountConfigCoordinator) {
